@@ -24,7 +24,7 @@ The traffice to the web server comes from the web application or the mobile appl
         "city": "New York",
         "state": "NY"
     },
-    "phoneNumbers: [
+    "phoneNumbers": [
         "212 555-1234",
         "646 555-4567"
     ]
