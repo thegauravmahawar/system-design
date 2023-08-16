@@ -15,3 +15,20 @@
 - Storage requirement over 10 years: **365 billion * 100 bytes = 36.5 TB** assuming average length of URL is 100
 
 ## API Endpoints
+
+**URL Shortening**
+
+```shell
+POST api/v1/data/shorten
+
+- Request Parameter: {longUrl: longURLString}
+- Return shortURL
+```
+
+**URL Redirecting**
+
+```shell
+GET api/v1/shortURL
+
+- Return longURL for HTTP redirection
+```
