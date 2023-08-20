@@ -10,15 +10,15 @@
 
 - Write Operation: **100 million URLs/day**
 - Write Operation/Sec: **100 million/24/3600 = 1160**
-- Read Operation: Assuming ratio of Read to Write as 10:1, Read Operation/Sec: **1160 * 10 = 11600**
-- Assuming service will run for 10 years, this means we must support **100 million * 365 * 10 = 365 billion records**
-- Storage requirement over 10 years: **365 billion * 100 bytes = 36.5 TB** assuming average length of URL is 100
+- Read Operation/Sec (assuming ratio of Read to Write as 10:1): **1160 * 10 = 11600**
+- Number of Records (assuming service will run for 10 years): **100 million * 365 * 10 = 365 billion records**
+- Storage requirement (assuming average length of URL is 100 bytes): **365 billion * 100 bytes = 36.5 TB**
 
 ## API Endpoints
 
 **URL Shortening**
 
-```shell
+```text
 POST api/v1/data/shorten
 
 - Request Parameter: {longUrl: longURLString}
@@ -27,8 +27,8 @@ POST api/v1/data/shorten
 
 **URL Redirecting**
 
-```shell
-GET api/v1/shortURL
+```text
+GET api/v1/{shortURL}
 
 - Return longURL for HTTP redirection
 ```
