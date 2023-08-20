@@ -32,3 +32,9 @@ GET api/v1/{shortURL}
 
 - Return longURL for HTTP redirection
 ```
+
+## URL redirecting
+
+![URL Redirection Browser](../assets/url_redirection_browser.png)
+
+Once the server receives a tinyurl request, it changes the short URL to the long URL with 301 redirect.
