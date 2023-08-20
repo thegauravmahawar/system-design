@@ -33,8 +33,24 @@ GET api/v1/{shortURL}
 - Return longURL for HTTP redirection
 ```
 
-## URL redirecting
+## URL Redirecting
 
 ![URL Redirection Browser](../assets/url_redirection_browser.png)
 
 Once the server receives a tinyurl request, it changes the short URL to the long URL with 301 redirect.
+
+**301 redirect**
+
+A 301 redirect shows that the requested URL is "permanently" moved to the long URL. Since it is permanently redirected, the browser caches the response, and subsequent requests for the same URL will not be sent to the URL shortening service. Instead, requests are redirected to the long URL directly.
+
+If the priority is to reduce the server load, using 301 redirect makes sense as only the first request of the same URL is sent to URL shortening servers.
+
+**302 redirect**
+
+A 302 redirect means that the URL is "temporarily" moved to the long URL, meaning that subsequent requests for the same URL will be sent to the URL shortening service first. 
+
+If analytics is important, 302 redirect is a better choice as it can track click rate and source of the click more easily.
+
+## URL Shortening
+
+## Data Model
