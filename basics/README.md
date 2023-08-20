@@ -2,7 +2,7 @@
 
 ## Single Server Setup
 
-![Single Server Setup](../00_assets/single_server_setup.png)
+![Single Server Setup](../assets/single_server_setup.png)
 
 Everything running on a single server: web app, database, cache, etc.
 
@@ -35,7 +35,7 @@ The traffice to the web server comes from the web application or the mobile appl
 
 With growing traffic, we need multiple servers: one for web/mobile traffic, the other for the database. Separating web/mobile traffic (web tier) and database (date tier) allows them to be scaled independently.
 
-![Web Server Database Server Setup](../00_assets/web_server_database_server.png)
+![Web Server Database Server Setup](../assets/web_server_database_server.png)
 
 <b>Which database to use?</b>
 
