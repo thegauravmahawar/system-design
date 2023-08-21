@@ -53,4 +53,27 @@ If analytics is important, 302 redirect is a better choice as it can track click
 
 ## URL Shortening
 
+To support the URL Shortening use case, we must find a hash function *fx* that maps a long URL to the *HashValue*.
+
+```mermaid
+graph LR;
+    LongURL-->HashFunction;
+    HashFunction-->ShortURL;
+```
+
+The hash function must satisfy the following requirements:
+
+- Each *LongURL* must be hashed to one *HashValue*.
+- Each *HashValue* can be mapped back to the *LongURL*.
+
 ## Data Model
+
+**URL Table**
+
+| column | data type |
+|---|---|
+| id | PK |
+| short_url | VARCHAR |
+| long_url | VARCHAR |
+
+## Hash Function
