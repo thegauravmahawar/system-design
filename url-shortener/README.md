@@ -77,3 +77,26 @@ The hash function must satisfy the following requirements:
 | long_url | VARCHAR |
 
 ## Hash Function
+
+Hash function is used to has a long URL to a short URL, also known as a *hash value*.
+
+**Hash value length**
+
+The hash value consists of characters from [0-9, a-z, A-Z], containing 62 possible characters. To figure out the length of hash value, find the smallest *n* such that *62^n >= 365 billion*. 
+
+| n | Maximal number of URLs |
+|---|---|
+| 1 | 62^1 = 62 |
+| 2 | 62^2 = 3844 |
+| 3 | 62^3 = 238328 |
+| 4 | 62^4 = 14776336 |
+| 5 | 62^5 = 916132832 |
+| 6 | 62^6 = 56800235584 |
+| 7 | 62^7 = 3521614606208 = ~3.5 trillion |
+| 8 | 62^8 = 218340105584896 |
+
+When *n = 7, 62^n = ~3.5 trillion*, this is more than enough to hold 365 billion URLs, so the length of the hash value is 7.
+
+**Approach 1: Hash + Collision resolution**
+
+**Approach 2: Base62 Conversion**
