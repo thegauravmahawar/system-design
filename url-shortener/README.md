@@ -97,6 +97,14 @@ The hash value consists of characters from [0-9, a-z, A-Z], containing 62 possib
 
 When *n = 7, 62^n = ~3.5 trillion*, this is more than enough to hold 365 billion URLs, so the length of the hash value is 7.
 
+To shorten a long URL, we should implement a hash function that hashes a long URL to a 7-character string.
+
 **Approach 1: Hash + Collision resolution**
+
+The first approach is to collect the first 7 characters of a hash value; however, this method can lead to hash collisions. To resolve hash collisions, we can recursively append a new predefined string until no more collision is discovered. 
+
+![Hash Collision](../assets/hash_collision.png)
+
+This method can eliminate collision; however, it is expensive to query the database to check if a short URL exists for every request.
 
 **Approach 2: Base62 Conversion**
