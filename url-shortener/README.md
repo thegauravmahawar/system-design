@@ -108,3 +108,11 @@ The first approach is to collect the first 7 characters of a hash value; however
 This method can eliminate collision; however, it is expensive to query the database to check if a short URL exists for every request.
 
 **Approach 2: Base62 Conversion**
+
+Base conversion helps to convert the same number between its different number representation systems. Base 62 conversion is used as there are 62 possible characters for *hash value*. 
+
+- From its name, Base 62 is a way of using 62 characters for encoding. The mappings are: 0-0, ..., 9-9, 10-a, 11-b, ..., 35-z, 36-A, ..., 61-Z, where 'a' stands for 10, 'Z' stands for 61, etc.
+- 11157<sub>10</sub> = 2 x 62<sup>2</sup> + 55 x 62<sup>1</sup> + 59 x 62<sup>0</sup> = [2, 55, 59] -> [2, T, X] in Base 62 representation.
+- Thus, the short URL is https://tinyurl.com/2TX.
+
+![Base 62 Conversion](../assets/base_62_conversion.png)
