@@ -116,3 +116,7 @@ Base conversion helps to convert the same number between its different number re
 - Thus, the short URL is https://tinyurl.com/2TX.
 
 ![Base 62 Conversion](../assets/base_62_conversion.png)
+
+**Comparison of the two approaches**
+
+![URL Shortening Methods Comparison](../assets/url_shortening_methods_comparison.png)
