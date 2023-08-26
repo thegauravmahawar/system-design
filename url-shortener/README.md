@@ -120,3 +120,22 @@ Base conversion helps to convert the same number between its different number re
 **Comparison of the two approaches**
 
 ![URL Shortening Methods Comparison](../assets/url_shortening_methods_comparison.png)
+
+## URL Shortener Deep Dive
+
+![URL Shortener Design](../assets/url_shortener_design.png)
+
+**Example**
+
+- Assuming the input long url is: https://en.wikipedia.org/wiki/Systems_design
+- Unique ID Generator returns ID: 2009215674938
+- Convert the ID to short url using the Base 62 conversion. ID (2009215674938) is converted to `zn9edcu`.
+- Save ID, short url, and long url in the database.
+
+| id | short_url | long_url |
+|---|---|---|
+| 2009215674938 | zn9edcu | https://en.wikipedia.org/wiki/Systems_design |
+
+## URL Redirecting Deep Dive
+
+
