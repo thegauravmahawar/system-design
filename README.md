@@ -11,4 +11,5 @@
 
 - [Basics](basics)
 - [Estimation](estimation)
+- [Design Unique ID Generator](unique-id-generator)
 - [Design URL Shortener](url-shortener)
