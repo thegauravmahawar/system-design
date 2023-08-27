@@ -138,4 +138,6 @@ Base conversion helps to convert the same number between its different number re
 
 ## URL Redirecting Deep Dive
 
+![URL Redirection Design](../assets/url_redirection_design.png)
 
+As there are more reads than writes, *<shortUrl, longUrl>* mapping is stored in a cache to improve performance.
