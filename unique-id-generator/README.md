@@ -23,3 +23,22 @@ This approach uses the databases' *auto_increment* feature. Instead of increasin
 - It does not scale well when a server is added or removed.
 
 **UUID**
+
+UUID is a 128-bit number used to identify information in computer systems. UUID has a very low probability of getting collusion. UUIDs can be generated independently without coordination between servers.
+
+![UUID](../assets/uuid.png)
+
+In this design, each web server contains an ID generator, and a web server is responsible for generating IDs indenpendently.
+
+Pros:
+
+- Generating UUIDs is simple. No coordination between servers is needed so there will not be any synchronization issues.
+- The system is easy to scale because each web server is responsible for generating IDs they consume. ID generator can easily scale with web servers.
+
+Cons:
+
+- IDs are 128 bits long, but our requirement is 64 bits.
+- IDs do not go up with time.
+- IDs could be non-numeric.
+
+**Ticket server**
