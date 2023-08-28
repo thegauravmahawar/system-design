@@ -78,7 +78,7 @@ The hash function must satisfy the following requirements:
 
 ## Hash Function
 
-Hash function is used to has a long URL to a short URL, also known as a *hash value*.
+Hash function is used to hash a long URL to a short URL, also known as a *hash value*.
 
 **Hash value length**
 
