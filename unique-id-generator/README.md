@@ -28,7 +28,7 @@ UUID is a 128-bit number used to identify information in computer systems. UUID 
 
 ![UUID](../assets/uuid.png)
 
-In this design, each web server contains an ID generator, and a web server is responsible for generating IDs indenpendently.
+In this design, each web server contains an ID generator, and a web server is responsible for generating IDs independently.
 
 Pros:
 
