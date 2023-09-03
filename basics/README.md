@@ -11,7 +11,7 @@ Everything running on a single server: web app, database, cache, etc.
 - Once the IP address is obtained, HTTP requests are sent directly to your web server. 
 - The web server returns HTML pages or JSON response for rendering.
 
-The traffice to the web server comes from the web application or the mobile application.
+The traffic to the web server comes from the web application or the mobile application.
 
 ## An example of API response in JSON format
 
