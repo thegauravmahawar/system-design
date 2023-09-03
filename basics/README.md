@@ -41,5 +41,28 @@ With growing traffic, we need multiple servers: one for web/mobile traffic, the 
 
 Non-relational databases might be the right choice if:
 
+- Your application requires super-low latency.
 - Your data is unstructured, or you do not have any relational data.
 - You only need to serialize and deserialize data. 
+
+## Vertical scaling vs. Horizontal scaling
+
+## Load Balancer
+
+## Database replication
+
+## Cache
+
+## Content Delivery Network (CDN)
+
+## Stateless Web tier
+
+## Data centers
+
+## Message Queues
+
+## Logging, Metrics, and Automation
+
+## Database Scaling
+
+## Millions of users and beyond 
