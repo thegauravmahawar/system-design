@@ -8,4 +8,6 @@ import urlshortenerapi.dao.Url;
 public interface UrlRepository extends ListCrudRepository<Url, Long> {
 
     Url findByLongUrl(String longUrl);
+
+    Url findByShortUrl(String shortUrl);
 }

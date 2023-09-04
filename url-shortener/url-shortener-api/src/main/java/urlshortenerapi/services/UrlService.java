@@ -3,10 +3,13 @@ package urlshortenerapi.services;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import urlshortenerapi.dao.Url;
+import urlshortenerapi.exceptions.NotFoundException;
 import urlshortenerapi.repositories.UrlRepository;
 import urlshortenerapi.resources.UrlResource;
 
 import java.util.Objects;
+
+import static java.lang.String.format;
 
 @Service
 public class UrlService {
@@ -49,5 +52,13 @@ public class UrlService {
         }
 
         return sb.toString();
+    }
+
+    public Url getUrl(String shortUrl) throws NotFoundException {
+        Url url = urlRepository.findByShortUrl(shortUrl);
+        if (Objects.isNull(url)) {
+            throw new NotFoundException(format("Short URL %s is invalid.", shortUrl), "NOT FOUND");
+        }
+        return url;
     }
 }
