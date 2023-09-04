@@ -2,16 +2,17 @@ package urlshortenerapi.dao;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "url")
 public class Url {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
@@ -27,5 +28,11 @@ public class Url {
     @PrePersist
     public void onCreate() {
         createdAt = LocalDateTime.now();
+    }
+
+    public Url(Integer id, String shortUrl, String longUrl) {
+        this.id = id;
+        this.shortUrl = shortUrl;
+        this.longUrl = longUrl;
     }
 }

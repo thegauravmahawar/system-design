@@ -6,14 +6,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ApiResponseSuccess extends ApiResponse {
-    private Object body;
+    private Object data;
 
     public ApiResponseSuccess() {
         this.status = "success";
     }
 
-    public ApiResponseSuccess(Object body) {
+    public ApiResponseSuccess(Object data) {
         this.status = "success";
-        this.body = body;
+        this.data = data;
     }
 }
