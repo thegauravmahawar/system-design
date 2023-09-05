@@ -47,6 +47,17 @@ Non-relational databases might be the right choice if:
 
 ## Vertical scaling vs. Horizontal scaling
 
+Vertical scaling, means the process of adding more power (CPU, RAM, etc.) to your servers. Horizontal scaling, allows you to scale by adding more servers into your pool of resources.
+
+When traffic is low, vertical scaling is a great option, and the simplicity of vertical scaling is its main advantage. However, there are limitations.
+
+- Vertical scaling has a hard limit. It is impossible to add unlimited CPU and memory to a single server.
+- Vertical scaling does not have failover and redundancy. If one server goes down, the website/app goes down with it completely.
+
+Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling.
+
+Users will be unable to access the website if the web server is offline. In another scenario, if many users access the web server simultaneously and it reaches the web server's load limit, users generally experience higher response time or fail to connect to the server. 
+
 ## Load Balancer
 
 ## Database replication
