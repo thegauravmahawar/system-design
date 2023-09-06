@@ -60,6 +60,15 @@ Users will be unable to access the website if the web server is offline. In anot
 
 ## Load Balancer
 
+A load balancer evenly distributes incoming traffic among web servers that are defined in a load-balanced set. 
+
+![Load Balancer](../assets/load_balancer.png)
+
+Users connect to the public IP of the load balancer directly. With this setup, web servers are unreachable directly by clients anymore. For better security, private IPs are used for communication between servers. A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the internet. The load balancer communicates with web servers through private IPs. 
+
+- If server 1 goes offline, all the traffic will be routed to server 2. This prevents the website from going offline. We will also add a new healthy web server to the server pool to balance the load.
+- If the website traffic grows rapidly, and two servers are not enough to handle the traffic, the load balancer can handle this problem gracefully. You only need to add more servers to the web server pool, and the load balancer automatically starts to send requests to them.
+
 ## Database replication
 
 ## Cache
