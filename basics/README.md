@@ -71,6 +71,15 @@ Users connect to the public IP of the load balancer directly. With this setup, w
 
 ## Database replication
 
+A master database generally only supports write operations. A slave database gets copies of the data from the master database and only supports read operations. Most applications require a much higher ratio of reads to writes; thus, the number of slave databases in a system is usually larger than the number of master databases.
+
+![Database Replication](../assets/database_replication.png)
+
+- If only one slave database is available and it goes offline, read operations will be directed to the master database temporarily.
+- If the master database goes offline, a slave database will be promoted to be the new master. All the database operations will be temporarily executed on the new master database.
+
+![Multi Server Multi Database](../assets/multi_server_multi_database.png)
+
 ## Cache
 
 ## Content Delivery Network (CDN)
