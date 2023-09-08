@@ -82,6 +82,10 @@ A master database generally only supports write operations. A slave database get
 
 ## Cache
 
+A cache is a temporary storage area that stores the result of expensive responses or frequently accessed data in memory so that subsequent requests are served more quickly. The application performance is greatly affected by calling the database repeatedly. The cache can mitigate this problem.
+
+![Cache](../assets/cache.png)
+
 ## Content Delivery Network (CDN)
 
 ## Stateless Web tier
