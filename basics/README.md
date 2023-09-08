@@ -86,6 +86,11 @@ A cache is a temporary storage area that stores the result of expensive response
 
 ![Cache](../assets/cache.png)
 
+**Considerations for using cache**
+
+- Mitigating failures: A single cache server represents a single point of failure (SPOF). As a result, multiple cache servers across different data centers are recommended to avoid SPOF. Another recommended approach is to overprovision the required memory by certain percentages.
+- Eviction Policy: Once the cache is full, any requests to add items to the cache might cause existing items to be removed. This is called cache eviction. Least-recently used (LRU) is the most popular cache eviction policy. Other eviction policies, such as the Least Frequently Used (LFU) or First In First Out (FIFO), can be adopted to satisfy use cases.
+
 ## Content Delivery Network (CDN)
 
 ## Stateless Web tier
