@@ -99,6 +99,15 @@ A CDN is a network of geographically dispersed servers used to deliver static co
 
 ![CDN Workflow](../assets/cdn_workflow.png)
 
+- User A tries to get `image.png` by using an image URL. The URL's domain is provided by the CDN provider.
+- If the CDN server does not have `image.png` in the cache, the CDN server requests the file from the origin, which can be a web server or online storage like AWS S3.
+- The origin returns `image.png` to the CDN server, which includes optional HTTP header Time-to-Live (TTL) which describes how long the image is cached.
+- The CDN caches the image and returns it to User A. The image remains cached in the CDN until the TTL expires.
+- User B sends a request to get the same image.
+- The image is returned from the cache as long as the TTL has not expired.
+
+**Considerations for using a CDN**
+
 ## Stateless Web tier
 
 ## Data centers
