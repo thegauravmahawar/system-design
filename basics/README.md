@@ -93,6 +93,12 @@ A cache is a temporary storage area that stores the result of expensive response
 
 ## Content Delivery Network (CDN)
 
+A CDN is a network of geographically dispersed servers used to deliver static content. CDN servers cache static content like images, videos, CSS, JavaScript files, etc.
+
+![CDN Load Time](../assets/cdn_load_time.png)
+
+![CDN Workflow](../assets/cdn_workflow.png)
+
 ## Stateless Web tier
 
 ## Data centers
