@@ -108,6 +108,13 @@ A CDN is a network of geographically dispersed servers used to deliver static co
 
 **Considerations for using a CDN**
 
+- Cost: CDNs are run by third-party providers, and you are charged for data transfers in and out of the CDN. Caching infrequently used assets provides no significant benefits so you should consider moving them out of the CDN.
+- Setting an appropriate cache expiry: The cache expiry time should neither be too long nor too short. If it is too long, the content might no longer be fresh. If it is too short, it can cause repeat reloading of content from origin servers to the CDN.
+- CDN fallback: You should consider how your website/application copes with CDN failure. If there is a temporary CDN outage, clients should be able to detect the problem and request resources from the origin.
+- Invalidating files: You can remove a file from the CDN before it expires by performing one of the following operations:
+  - Invalidate the CDN object using APIs provided by CDN vendors.
+  - Use object versioning to serve a different version of the object. 
+
 ## Stateless Web tier
 
 ## Data centers
