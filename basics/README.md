@@ -117,6 +117,22 @@ A CDN is a network of geographically dispersed servers used to deliver static co
 
 ## Stateless Web tier
 
+A stateful server remembers client data (state) from one request to the next. A stateless server keeps no state information.
+
+**Stateful architecture**
+
+![Stateful Architecture](../assets/stateful_architecture.png)
+
+User A's session data and profile image are stored in Server 1. To authenticate User A, HTTP requests must be routed to Server 1. If a request is sent to other servers like Server 2, authentication would fail because Server 2 does not contain User A's session data. 
+
+The issue is that every request from the same client must be routed to the same server. This can be done with sticky sessions in most load balancers; however, this adds the overhead of adding and removing servers. It is also challenging to handle server failures.
+
+**Stateless architecture**
+
+![Stateless Architecture](../assets/stateless_architecture.png)
+
+In stateless architecture, HTTP requests from users can be sent to any web servers, which fetch state data from a shared data store. State data is stored in a shared data store and kept out of web servers. 
+
 ## Data centers
 
 ## Message Queues
