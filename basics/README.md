@@ -135,6 +135,10 @@ In stateless architecture, HTTP requests from users can be sent to any web serve
 
 ## Data centers
 
+![Two Data Centers Geo DNS](../assets/two_data_centers_geo_dns.png)
+
+In normal operation, users are geoDNS-routed, also known as geo-routed, to the closest data center, with a split traffic of *x%* in US-East and *(100 - x)%* in US-West. geoDNS is a DNS service that allows domain names to be resolved to IP addresses based on the location of a user.
+
 ## Message Queues
 
 ## Logging, Metrics, and Automation
