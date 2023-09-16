@@ -139,6 +139,14 @@ In stateless architecture, HTTP requests from users can be sent to any web serve
 
 In normal operation, users are geoDNS-routed, also known as geo-routed, to the closest data center, with a split traffic of *x%* in US-East and *(100 - x)%* in US-West. geoDNS is a DNS service that allows domain names to be resolved to IP addresses based on the location of a user.
 
+In the event of any significant data center outage, we direct all traffic to a healty data center.
+
+Several technical challenges must be resolved to achieve multi-data center setup:
+
+- Traffic redirection: Effective tools are needed to direct traffic to the correct data center. GeoDNS can be used to direct traffic to the nearest data center depending on where a user is located.
+- Data synchronization: Users from different regions could use differnt local databases or caches. In failover cases, traffic might be routed to a data center where data is unavailable.
+- Test and deployment: With multi-data center setup, it is important to test your website/application at different locations.
+
 ## Message Queues
 
 ## Logging, Metrics, and Automation
