@@ -157,7 +157,15 @@ Decoupling makes the message queue a preferred architecture for building a scala
 
 ## Logging, Metrics, and Automation
 
+**Logging**: Monitoring error logs is important because it helps to identify errors and problems in the system. You can monitor error logs at per server level or use tools to aggregate them to a centralized service for easy search and viewing.
 
+**Metrics**: Collecting different types of metrics help us to gain business insights and understand the health status of the system. 
+
+- Host level metrics: CPU, Memory, disk I/O, etc.
+- Aggregated level metrics: for example, performance of the entire database tier, cache tier, etc.
+- Key business metrics: daily active users, retention, revenue, etc.
+
+**Automation**: When a system gets big and complex, we need to build or leverage automation tools to improve productivity. Continuous integration is a good practice, in which each code check-in is verified through automation, allowing teams to detect problems early.
 
 ## Database Scaling
 
