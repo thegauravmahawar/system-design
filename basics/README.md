@@ -149,7 +149,15 @@ Several technical challenges must be resolved to achieve multi-data center setup
 
 ## Message Queues
 
+A message queue is a durable component, stored in memory, that supports asynchronous communication. It serves as a buffer and distributes asynchronous requests. Input services, called producers/publishers, create messages, and publish them to a message queue. Other services or servers, called consumers/subscribers, connect to the queue, and perform actions defined by the messages.
+
+![Message Queue](../assets/message_queue.png)
+
+Decoupling makes the message queue a preferred architecture for building a scalable and reliable application. With the message queue, the producer can post a message to the queue when the consumer is unavailable to process it. The consumer can read messages from the queue even when the producer is unavailable. 
+
 ## Logging, Metrics, and Automation
+
+
 
 ## Database Scaling
 
