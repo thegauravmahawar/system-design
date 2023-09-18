@@ -187,4 +187,15 @@ User data is allocated to a database server based on user IDs. Anytime you acces
 
 ![Shard 2](../assets/shard_2.png)
 
+The most important factor to consider when implementing a sharding strategy is the choice of the sharding key. Sharding key (known as a partition key) consists of one or more columns that determine how data is distributed. 
+
+**Resharding data**: Resharding data is needed when:
+
+- A single shard could no longer hold more data due to rapid growth.
+- Certain shards might experience shard exhaustion faster than others due to uneven data distribution. When shard exhaustion happens, it requires updating the sharding function and moving data around.
+
+**Celebrity problem**: This is also called a hotspot key problem. Excessive access to a specific shard could cause server overload. For social applications, that shard will be overwhelmed with read operations. To solve this problem, we may need to allocate a shard for each celebrity. Each shard might even require further partition.
+
+**Join and de-normalization**: Once a database has been sharded across multiple servers, it is hard to perform join operations across database shards. A common workaround is to de-normalize the database so that queries can be performed in a single table.
+
 ## Millions of users and beyond 
