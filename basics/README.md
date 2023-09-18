@@ -169,4 +169,22 @@ Decoupling makes the message queue a preferred architecture for building a scala
 
 ## Database Scaling
 
+**Vertical Scaling**
+
+Vertical scaling, also known as scaling up, is the scaling by adding more power (CPU, RAM, disk, etc.) to an existing machine.
+
+**Horizontal Scaling**
+
+Horizontal scaling, also known as sharding, is the practice of adding more servers.
+
+![Vertical vs Horizontal Scaling](../assets/vertical_vs_horizontal_scaling.png)
+
+Sharding separates large databases into smaller, more easily managed parts called shards. Each shard shares the same schema, though the actual data on each shard is unique to the shard.
+
+![Shard 1](../assets/shard_1.png)
+
+User data is allocated to a database server based on user IDs. Anytime you access data, a hash function is used to find the corresponding shard. In the example, *user_id % 4* is used as the hash function. If the result is equal to 0, shard 0 is used to store and fetch data. If the result is 1, shard 1 is used.
+
+![Shard 2](../assets/shard_2.png)
+
 ## Millions of users and beyond 
