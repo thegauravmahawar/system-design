@@ -198,4 +198,3 @@ The most important factor to consider when implementing a sharding strategy is t
 
 **Join and de-normalization**: Once a database has been sharded across multiple servers, it is hard to perform join operations across database shards. A common workaround is to de-normalize the database so that queries can be performed in a single table.
 
-## Millions of users and beyond 
