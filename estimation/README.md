@@ -53,3 +53,10 @@ Estimations:
   - 5-year media storage = 30 TB * 365 * 5 = ~55 PB
 
 ## Tips
+
+Solving the problem is more important than obtaining results. 
+
+- Precision is not expected. Use round numbers and approximation to your advantage.
+- Write down your assumptions to reference later.
+- Label your units.
+- Commonly asked back-of-the-envelope estimations: QPS, peak QPS, storage, cache, number of servers, etc.
