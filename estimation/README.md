@@ -22,6 +22,12 @@ By analyzing the numbers we get the following conclusions:
 
 ## Availability numbers
 
+High availability is the ability of a system to be continuously operational for a desirably long period of time. High availability is measured as a percentage, with 100% means a service has 0 downtime.
+
+A service level agreement (SLA) is a commonly used term for service providers. This is an agreement between you (the service provider) and your customer, and this agreement formally defines the level of uptime your service will deliver.
+
+![Availability Numbers](../assets/availability_numbers.png)
+
 ## Example: Estimate Twitter QPS and Storage requirements
 
 ## Tips
