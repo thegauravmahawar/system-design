@@ -24,7 +24,7 @@ This approach uses the databases' *auto_increment* feature. Instead of increasin
 
 **UUID**
 
-UUID is a 128-bit number used to identify information in computer systems. UUID has a very low probability of getting collusion. UUIDs can be generated independently without coordination between servers.
+UUID is a 128-bit number used to identify information in computer systems. UUID has a very low probability of getting collision. UUIDs can be generated independently without coordination between servers.
 
 ![UUID](../assets/uuid.png)
 
