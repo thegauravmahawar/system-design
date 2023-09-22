@@ -1,5 +1,7 @@
 # URL Shortener
 
+Short links save a lot of space when displayed, printed, messaged, or tweeted. URL Shortening is used to optimize links across devices, track individual links to analyze audience, measure ad campaigns' performance, or hide affiliated original URLs.
+
 ## Use Cases
 
 - URL Shortening: Long URL => Short URL
