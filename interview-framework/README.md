@@ -23,7 +23,7 @@ A list of questions to get started:
 - How fast does the company anticipate to scale up?
 - What existing services you might leverage to simplify the design?
 
-Example questions for designing a News Feed:
+Sample questions to ask an interviewer for designing a News Feed:
 
 - Is this a mobile app? Or a web app? Or both?
 - Is the news feed sorted in reverse chronological order or a custom order? Custom order means each post is given a different weight. For instance, posts from your close friends are more important than posts from a group.
