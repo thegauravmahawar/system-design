@@ -47,4 +47,19 @@ At the high level, the design is divided into two flows: feed publishing and new
 
 ### Step 3 - Design deep dive
 
+You shall work with the interviewer to identify and prioritize components in the architecture. Sometimes, for a senior candidate interview, the discussion could be on the system performance characteristics, likely focusing on the bottlenecks and resource estimations. 
+
+For URL shortener, it is interesting to dive into the hash function design that converts a long URL to a short one. For a chat system, how to reduce latency and how to support online/offline status are two interesting topics.
+
+Time management is essential as it is easy to get carried away with minute details that do not demonstrate your abilities.
+
+#### Example - Investigating two of the most important use cases
+
+1. Feed publishing
+2. News feed retrieval
+
+![Feed Publish Design](../assets/feed_publish_design.png)
+
+![News Feed Retrieval Design](../assets/news_feed_retrieval_design.png)
+
 ### Step 4 - Wrap up
