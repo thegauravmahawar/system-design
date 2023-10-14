@@ -31,3 +31,20 @@ Sample questions to ask an interviewer for designing a News Feed:
 - Can the feed contain images, videos, or just text?
 
 ### Step 2 - Propose high-level design and get buy-in
+
+- Come up with a initial blueprint for the design. Ask for feedback. Treat your interviewer as a teammate and work together.
+- Draw box diagrams with key components on the whiteboard or paper.
+- Do back-of-the-envelope calculations to evaluate if your blueprint fits the scale constraints.
+
+#### Example - Design a News Feed System
+
+At the high level, the design is divided into two flows: feed publishing and news feed building.
+
+- Feed publishing: when a user publishes a post, corresponding data is written into cache/database, and the post will be populated into friends' news feed.
+- Newsfeed publishing: the news feed is built by aggregating friends' posts in a reverse chronological order.
+
+![Feed Publishing](../assets/feed_publishing.png)
+
+### Step 3 - Design deep dive
+
+### Step 4 - Wrap up
