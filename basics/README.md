@@ -33,7 +33,7 @@ The traffic to the web server comes from the web application or the mobile appli
 
 ## Database
 
-With growing traffic, we need multiple servers: one for web/mobile traffic, the other for the database. Separating web/mobile traffic (web tier) and database (date tier) allows them to be scaled independently.
+With growing traffic, we need multiple servers: one for web/mobile traffic, the other for the database. Separating web/mobile traffic (web tier) and database (data tier) allows them to be scaled independently.
 
 ![Web Server Database Server Setup](../assets/web_server_database_server.png)
 
